@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # copy files
 cp -R copy/. $HOME
 
