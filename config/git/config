@@ -1,0 +1,38 @@
+[user]
+	name = Remi Marche
+	email = remimarche@gmail.com
+
+[github]
+	user = marr11317
+
+[core]
+	editor = code --wait
+	filemode = true
+
+[pull]
+	rebase = true
+
+[init]
+	defaultBranch = trunk
+
+[grep]
+	lineNumber = true
+
+[help]
+	autocorrect = 1
+
+[alias]
+	amend = commit --amend --reuse-message=HEAD
+	br = branch
+	ci = commit
+	co = checkout
+	contrib = shortlog --summary --numbered
+	p = push
+	pf = push --force
+	pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+	st = status
+	ec = config -e
+	pushit = push -u
+	pushitup = pushit upstream
+	pushitor = pushit origin
+	logl = "!f() { git log -n ${1:10} } ; f"
