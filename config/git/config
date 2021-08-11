@@ -13,7 +13,7 @@
 	rebase = true
 
 [init]
-	defaultBranch = trunk
+	defaultBranch = main
 
 [grep]
 	lineNumber = true
@@ -36,3 +36,6 @@
 	pushitup = pushit upstream
 	pushitor = pushit origin
 	logl = "!f() { git log -n ${1:10} } ; f"
+
+	# Allow `$ git git git...`
+	git = !exec git
