@@ -32,7 +32,7 @@
 	pf = push --force
 	pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
 	st = status
-	ec = config -e
+	ec = config --global --edit
 	pushit = push -u
 	pushitup = pushit upstream
 	pushitor = pushit origin
