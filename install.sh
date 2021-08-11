@@ -1,24 +1,23 @@
 # copy files
-cp -r /copy/* $HOME
-
+cp -R copy/. $HOME
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    source "/specific/ubuntu.sh";
+    source "./specific/ubuntu.sh"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    source "/specific/macos.sh";
+    source "./specific/macos.sh"
 elif [[ "$OSTYPE" == "cygwin" ]]; then
-        # POSIX compatibility layer and Linux environment emulation for Windows
+    echo "No script for cygwin"
 elif [[ "$OSTYPE" == "msys" ]]; then
-        # Lightweight shell and GNU utilities compiled for Windows (part of MinGW)
+    echo "No script for msys"
 elif [[ "$OSTYPE" == "win32" ]]; then
-        # I'm not sure this can happen.
+    echo "No script for win32"
 elif [[ "$OSTYPE" == "freebsd"* ]]; then
-        # ...
+    echo "No script for freebsd"
 else
-        echo "Unknown OS."
+    echo "Unknown OS."
 fi
 
 # Global scripts
-for f in ../global/*; do
+for f in "./global/*"; do
    source $f
 done
