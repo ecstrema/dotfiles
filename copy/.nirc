@@ -1,0 +1,6 @@
+# config file for @antfu/ni; fallback when no lock found
+
+defaultAgent=pnpm # default "prompt"
+
+; for global installs
+globalAgent=pnpm
