@@ -33,10 +33,11 @@
 	pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
 	st = status
 	ec = config --global --edit
-	pushit = push -u
-	pushitup = pushit upstream
-	pushitor = pushit origin
-	logl = "!f() { git log -n ${1:10} } ; f"
+	pushit = push -u origin
+	logl = "!f() { git log --oneline -n ${1-10}; }; f"
+	undo = reset HEAD~1 --mixed
+	# delete merged branches locally and on remote
+	bclean = "!f() { git checkout ${1-master} && git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
 
 	# Allow `$ git git git...`
 	git = !exec git
