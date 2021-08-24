@@ -27,6 +27,7 @@
 	br = branch
 	ci = commit
 	co = checkout
+	cob = checkout -b
 	contrib = shortlog --summary --numbered
 	p = push
 	pf = push --force
