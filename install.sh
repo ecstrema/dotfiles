@@ -10,7 +10,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 elif [[ "$OSTYPE" == "cygwin" ]]; then
     echo "No script for cygwin"
 elif [[ "$OSTYPE" == "msys" ]]; then
-    echo "No script for msys"
+    echo "No script for msys/windows"
 elif [[ "$OSTYPE" == "win32" ]]; then
     echo "No script for win32"
 elif [[ "$OSTYPE" == "freebsd"* ]]; then
