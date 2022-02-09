@@ -7,4 +7,4 @@ source ~/.profile   # load profile
 nvm install lts --reinstall-packages-from=default --latest-npm
 
 # app installs
-apt install musescore
+# apt install musescore
