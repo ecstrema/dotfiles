@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Utilities install
-apt install curl unzip tree
+# sudo apt install curl unzip tree
 
 # app installs
-# apt install musescore
+# sudo apt install musescore
