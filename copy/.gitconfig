@@ -23,6 +23,8 @@
 	autocorrect = 1
 
 [alias]
+	# stash unstaged changes and untracked files
+	stashnew = stash -k -u
 	continue = rebase --continue
 	amend = commit --amend --reuse-message=HEAD
 	br = branch
