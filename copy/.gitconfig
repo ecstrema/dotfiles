@@ -48,3 +48,12 @@
 
 	# Allow `$ git git git...`
 	git = !exec git
+
+	# delete file from history, https://stackoverflow.com/questions/43762338/how-to-remove-file-from-git-history
+	# Note that git filter-branch is actually the recommended tool, because it is easier, faster and safer, but this one works.
+	history-file-delete = "!f() { git filter-branch --index-filter 'git rm -rf --cached --ignore-unmatch $1' HEAD; }; f"
+
+	# push to remote by chunk to avoid large file error
+	# give as argument the last commit to push
+	# https://gist.github.com/Sacristan/8e759e6d7627a9ba4b26643869188426
+	push-chunk = "!f() { git push origin $1:refs/heads/${2-main} --force; }; f"
