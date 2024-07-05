@@ -1,59 +1,59 @@
 [user]
-	name = Remi Marche
-	email = remimarche@gmail.com
+name = Remi Marche
+email = remimarche@gmail.com
 
 [github]
-	user = ecstrema
+user = ecstrema
 
 [core]
-	editor = code --wait
-	filemode = true
-	autocrlf = true
+editor = code --wait
+filemode = true
+autocrlf = false
 
 [pull]
-	rebase = true
+rebase = true
 
 [init]
-	defaultBranch = main
+defaultBranch = main
 
 [grep]
-	lineNumber = true
+lineNumber = true
 
 [help]
-	autocorrect = 1
+autocorrect = 1
 
 [alias]
-	# stash unstaged changes and untracked files
-	stashnew = stash -k -u
-	continue = rebase --continue
-	amend = commit --amend --reuse-message=HEAD
-	br = branch
-	ci = commit
-	co = checkout
-	cob = checkout -b
-	contrib = shortlog --summary --numbered
-	p = push
-	pf = push --force
-	pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
-	st = status
-	ec = config --global --edit
-	pushit = push -u origin
-	logl = "!f() { git log --oneline -n ${1-10}; }; f"
-	undo = reset HEAD~1 --mixed
-	# delete merged branches locally and on remote
-	bclean = "!f() { git checkout ${1-master} && git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
+# stash unstaged changes and untracked files
+stashnew = stash -k -u
+continue = rebase --continue
+amend = commit --amend --reuse-message=HEAD
+br = branch
+ci = commit
+co = checkout
+cob = checkout -b
+contrib = shortlog --summary --numbered
+p = push
+pf = push --force
+pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+st = status
+ec = config --global --edit
+pushit = push -u origin
+logl = "!f() { git log --oneline -n ${1-10}; }; f"
+undo = reset HEAD~1 --mixed
+# delete merged branches locally and on remote
+bclean = "!f() { git checkout ${1-master} && git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
 
-	# delete upstream branchs
-	updel = push -d origin
+# delete upstream branchs
+updel = push -d origin
 
-	# Allow `$ git git git...`
-	git = !exec git
+# Allow `$ git git git...`
+git = !exec git
 
-	# delete file from history, https://stackoverflow.com/questions/43762338/how-to-remove-file-from-git-history
-	# Note that git filter-branch is actually the recommended tool, because it is easier, faster and safer, but this one works.
-	history-file-delete = "!f() { git filter-branch --index-filter 'git rm -rf --cached --ignore-unmatch $1' HEAD; }; f"
+# delete file from history, https://stackoverflow.com/questions/43762338/how-to-remove-file-from-git-history
+# Note that git filter-branch is actually the recommended tool, because it is easier, faster and safer, but this one works.
+history-file-delete = "!f() { git filter-branch --index-filter 'git rm -rf --cached --ignore-unmatch $1' HEAD; }; f"
 
-	# push to remote by chunk to avoid large file error
-	# give as argument the last commit to push
-	# https://gist.github.com/Sacristan/8e759e6d7627a9ba4b26643869188426
-	push-chunk = "!f() { git push origin $1:refs/heads/${2-main} --force; }; f"
+# push to remote by chunk to avoid large file error
+# give as argument the last commit to push
+# https://gist.github.com/Sacristan/8e759e6d7627a9ba4b26643869188426
+push-chunk = "!f() { git push origin $1:refs/heads/${2-main} --force; }; f"

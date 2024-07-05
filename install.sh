@@ -21,5 +21,5 @@ fi
 
 # Global scripts
 for f in "./global/*"; do
-   source $f
+    source $f
 done
