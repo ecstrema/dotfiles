@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-# copy files
+# copy files first, because some installation scripts append to the bashrc or similar
 cp -R copy/. $HOME
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
