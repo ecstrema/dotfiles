@@ -17,4 +17,5 @@ winget install \
     7zip.7zip \
     DuongDieuPhap.ImageGlass \
     ActivityWatch.ActivityWatch \
-    OpenJS.NodeJS.LTS
+    OpenJS.NodeJS.LTS \
+    ezwinports.make
