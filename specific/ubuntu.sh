@@ -26,29 +26,19 @@ sudo apt install \
     hostname \
     htop \
     inkscape \
+    musescore \
     lcov \
     lldb \
-    microsoft-edge-stable \
-    ninja-build \
-    openocd \
     pipx \
     python3 \
     python3-matplotlib \
     python3-numpy \
     python3-pip \
-    python3-psutil \
-    python3-pydotplus \
-    python3-pyqt5 \
-    python3-pyqt6 \
-    python3-pyqtgraph \
     python3-venv \
     sshpass \
     tree \
     unzip \
-    verilator \
-    wget \
-    wireshark \
-    xxd
+    wget
 
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor >packages.microsoft.gpg
 sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
@@ -62,9 +52,6 @@ rm warpdotdev.gpg
 sudo apt update && sudo apt install warp-terminal
 
 curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
-
-# app installs
-# sudo apt install musescore
 
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 source ~/.bashrc
