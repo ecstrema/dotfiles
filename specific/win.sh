@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
-winget install Git.Git \
+winget install \
+    Git.Git \
     Microsoft.VisualStudioCode \
     Microsoft.WindowsTerminal \
     Python.Python.3.13 \
@@ -14,4 +15,6 @@ winget install Git.Git \
     Audacity.Audacity \
     GIMP.GIMP \
     7zip.7zip \
-    DuongDieuPhap.ImageGlass
+    DuongDieuPhap.ImageGlass \
+    ActivityWatch.ActivityWatch \
+    OpenJS.NodeJS.LTS
