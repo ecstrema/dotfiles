@@ -10,6 +10,31 @@ editor = code --wait
 filemode = true
 autocrlf = false
 
+[column]
+ui = auto
+
+[branch]
+sort = -committerdate
+
+[tag]
+sort = version:refname
+
+[diff]
+algorithm = histogram
+colorMoved = plain
+mnemonicPrefix = true
+renames = true
+
+[push]
+default = simple
+autoSetupRemote = true
+followTags = true
+
+[fetch]
+prune = true
+pruneTags = true
+all = true
+
 [pull]
 rebase = true
 
@@ -20,7 +45,15 @@ defaultBranch = main
 lineNumber = true
 
 [help]
-autocorrect = 1
+autocorrect = prompt
+
+[commit]
+verbose = true
+
+[rebase]
+autoSquash = true
+autoStash = true
+updateRefs = true
 
 [alias]
 # stash unstaged changes and untracked files
