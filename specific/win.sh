@@ -4,7 +4,7 @@ winget install \
     Git.Git \
     Microsoft.VisualStudioCode \
     Microsoft.WindowsTerminal \
-    Python.Python.3.13 \
+    python3 \
     Microsoft.PowerToys \
     Oven-sh.Bun \
     Vivaldi.Vivaldi \
