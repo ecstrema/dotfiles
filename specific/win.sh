@@ -7,7 +7,6 @@ winget install \
     python3 \
     Microsoft.PowerToys \
     Oven-sh.Bun \
-    Vivaldi.Vivaldi \
     Musescore.Musescore \
     JGraph.Draw \
     Inkscape.Inkscape \
@@ -18,4 +17,7 @@ winget install \
     DuongDieuPhap.ImageGlass \
     ActivityWatch.ActivityWatch \
     OpenJS.NodeJS.LTS \
-    ezwinports.make
+    ezwinports.make \
+    GnuPG.Gpg4win \
+    gopass.gopass \
+    Zen-Team.Zen-Browser

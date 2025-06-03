@@ -71,13 +71,12 @@ if ! shopt -oq posix; then
     fi
 fi
 
-# pnpm
-export PNPM_HOME="/home/remimarche/.local/share/pnpm"
-case ":$PATH:" in
-*":$PNPM_HOME:"*) ;;
-*) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 eval "$(atuin init bash)"
+
+# Add an alias for pass=gopass and pass=gopass.exe under Windows
+if [[ -n "$WINDIR" ]]; then
+    alias pass='gopass.exe'
+else
+    alias pass='gopass'
+fi
