@@ -18,6 +18,5 @@ winget install \
     ActivityWatch.ActivityWatch \
     OpenJS.NodeJS.LTS \
     ezwinports.make \
-    GnuPG.Gpg4win \
-    gopass.gopass \
+    Bitwarden.Bitwarden \
     Zen-Team.Zen-Browser
