@@ -29,11 +29,6 @@ function t_stop {
 
 trap 't_start' DEBUG
 
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-xterm-color | *-256color) color_prompt=yes ;;
-esac
-
 PROMPT_COMMAND='PS1_CMD1=$(__git_ps1 "(%s) ");t_stop'
 if [ "$color_prompt" = yes ]; then
     # see https://bash-prompt-generator.org/
@@ -57,9 +52,6 @@ else
     alias ls='ls -A'
 fi
 
-# colored GCC warnings and errors
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -72,11 +64,3 @@ if ! shopt -oq posix; then
 fi
 
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
-eval "$(atuin init bash)"
-
-# Add an alias for pass=gopass and pass=gopass.exe under Windows
-if [[ -n "$WINDIR" ]]; then
-    alias pass='gopass.exe'
-else
-    alias pass='gopass'
-fi
