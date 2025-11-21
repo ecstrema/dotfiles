@@ -29,6 +29,11 @@ function t_stop {
 
 trap 't_start' DEBUG
 
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+xterm-color | *-256color) color_prompt=yes ;;
+esac
+
 PROMPT_COMMAND='PS1_CMD1=$(__git_ps1 "(%s) ");t_stop'
 if [ "$color_prompt" = yes ]; then
     # see https://bash-prompt-generator.org/
