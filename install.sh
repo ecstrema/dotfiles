@@ -7,7 +7,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     source "./specific/ubuntu.sh"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     source "./specific/macos.sh"
-elif [[ "$OSTYPE" == "msys" ]]; then
+elif [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" ]]; then
     source "./specific/win.sh"
 else
     echo "No specific scripts for $OSTYPE!"
