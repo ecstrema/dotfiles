@@ -8,7 +8,7 @@ user = ecstrema
 [core]
 editor = code --wait
 filemode = true
-autocrlf = false
+autocrlf = input
 
 [column]
 ui = auto

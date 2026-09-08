@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # copy files first, because some installation scripts append to the bashrc or similar
 cp -R copy/. $HOME
@@ -12,10 +12,5 @@ elif [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" ]]; then
 else
     echo "No specific scripts for $OSTYPE!"
 fi
-
-# Global scripts
-for f in "./global/*"; do
-    source $f
-done
 
 echo "Done"

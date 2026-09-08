@@ -56,3 +56,9 @@ curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 source ~/.bashrc
 pnpm env --global use lts
+
+mkdir -p ~/.local/share/fonts
+curl -fLo FiraCode.zip https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip
+unzip FiraCode.zip -d ~/.local/share/fonts
+fc-cache -fv
+rm FiraCode.zip

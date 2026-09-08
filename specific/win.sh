@@ -12,7 +12,9 @@ winget install \
     OpenJS.NodeJS.LTS \
     ezwinports.make \
     astral-sh.uv \
-    Microsoft.VisualStudioCode
+    Microsoft.VisualStudioCode \
+    RyanOasis.NerdFont.FiraCode \
+    starship
 
 # Echo to add the contents of winterminalconfig.json to the Windows Terminal settings file
 echo "Add the following to the Windows Terminal settings file: (can be found in the dropdown menu of the Windows Terminal, Settings, Open JSON file)"
