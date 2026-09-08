@@ -14,13 +14,17 @@ if ! grep -q "/opt/homebrew/bin/brew shellenv" ~/.zprofile; then
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 fi
 
-brew install --cask orion
+brew install --cask zen
 brew install --cask visual-studio-code
 brew install --cask font-fira-code-nerd-font
 brew install --cask microsoft-outlook
 brew install --cask bitwarden
 brew install --cask whatsapp
 brew install --cask last-window-quits
+
+brew install --cask crmne/tap/fastpotify
+find /Applications/Fastpotify.app -exec xattr -d com.apple.quarantine {} \; 2>/dev/null
+
 
 brew install starship
 brew install uv
