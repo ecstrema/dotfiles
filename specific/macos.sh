@@ -19,7 +19,12 @@ brew install --cask visual-studio-code
 brew install --cask font-fira-code-nerd-font
 brew install --cask microsoft-outlook
 brew install --cask bitwarden
+brew install --cask whatsapp
+
 brew install starship
+brew install uv
+brew install bun
+brew install nodejs
 
 defaults write com.apple.finder AppleShowAllFiles true
 
