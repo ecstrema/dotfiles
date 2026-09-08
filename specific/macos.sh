@@ -20,6 +20,7 @@ brew install --cask font-fira-code-nerd-font
 brew install --cask microsoft-outlook
 brew install --cask bitwarden
 brew install --cask whatsapp
+brew install --cask last-window-quits
 
 brew install starship
 brew install uv
