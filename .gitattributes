@@ -1,0 +1,12 @@
+# Default behavior: Let Git auto-detect text files and normalize them to LF internally.
+# On checkout, Git will convert them to the native format of the OS.
+* text=auto
+
+# CRITICAL FOR DOTFILES: Force shell scripts and config files to ALWAYS use LF.
+# If Git checks these out with Windows CRLF, bash/zsh on Windows (Git Bash/WSL) will crash.
+*.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf
+.bashrc text eol=lf
+.zprofile text eol=lf
+.zshrc text eol=lf
