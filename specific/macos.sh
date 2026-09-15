@@ -21,9 +21,9 @@ brew install --cask font-fira-code-nerd-font
 brew install --cask microsoft-outlook
 brew install --cask whatsapp
 
-brew install --cask crmne/tap/fastpotify
-find /Applications/Fastpotify.app -exec xattr -d com.apple.quarantine {} \; 2>/dev/null
-
+brew trust --cask crmne/tap/spotifast
+brew install --cask crmne/tap/spotifast
+find /Applications/Spotifast.app -exec xattr -d com.apple.quarantine {} \; 2>/dev/null
 
 brew install starship
 brew install uv
